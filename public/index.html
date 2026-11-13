@@ -1,0 +1,59 @@
+<html lang="bn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="MD TUMUL - সহজে ছবি আপলোড ও গ্যালারিতে দেখুন।">
+  <title>MD TUMUL | Photo Upload</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">MT</span><span>MD <b>TUMUL</b><small>PHOTO STUDIO</small></span></a>
+    <span class="top-note">YOUR PHOTO SPACE</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow"><span></span> PERSONAL PHOTO GALLERY</div>
+      <h1>আপনার ছবি,<br><em>আপনার গ্যালারি।</em></h1>
+      <p>সহজেই ছবি আপলোড করুন এবং নিজের অনলাইন গ্যালারিতে দেখুন।</p>
+      <a class="jump" href="#upload">ছবি আপলোড করুন <span>↓</span></a>
+    </section>
+
+    <section class="panel" id="upload">
+      <div class="section-head">
+        <div><div class="kicker">UPLOAD CENTER</div><h2>ছবি আপলোড</h2></div>
+        <span class="limit">সর্বোচ্চ ১০টি ছবি · ১০ MB করে</span>
+      </div>
+      <label class="dropzone" id="dropzone" for="fileInput">
+        <span class="upload-icon">↑</span>
+        <strong>ছবি নির্বাচন করুন</strong>
+        <span>অথবা এখানে ছবি টেনে এনে ছেড়ে দিন</span>
+        <small>JPG · PNG · GIF · WEBP</small>
+        <input id="fileInput" type="file" accept="image/jpeg,image/png,image/gif,image/webp" multiple hidden>
+      </label>
+      <div id="preview" class="preview-grid"></div>
+      <div class="upload-actions">
+        <span id="status" role="status">এখনো কোনো ছবি নির্বাচন করা হয়নি</span>
+        <button id="uploadBtn" disabled>আপলোড করুন <span>↗</span></button>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-head">
+        <div><div class="kicker">YOUR COLLECTION</div><h2>আমার গ্যালারি</h2></div>
+        <span class="count" id="photoCount">০ টি ছবি</span>
+      </div>
+      <div id="gallery" class="gallery-grid"><div class="empty">গ্যালারি লোড হচ্ছে...</div></div>
+    </section>
+  </main>
+
+  <footer><span class="brand-mark small">MT</span><span>© <span id="year"></span> MD TUMUL</span><span>MADE FOR YOUR MEMORIES</span></footer>
+  <div id="lightbox" class="lightbox" aria-hidden="true"><button id="closeLightbox" aria-label="বন্ধ করুন">×</button><img id="lightboxImg" alt="বড় ছবি"></div>
+  <script src="app.js"></script>
+</body>
+</html>
